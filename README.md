@@ -1,10 +1,9 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a todo list app [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
-
-First, run the development server:
+## วิธีติดตั้งและรันโปรเจกต์
 
 ```bash
+npm install
 npm run dev
 # or
 yarn dev
@@ -13,24 +12,28 @@ pnpm dev
 # or
 bun dev
 ```
+เปิด [http://localhost:3000](http://localhost:3000) ที่เบราเซอร์เพื่อดูผลลัพธ์.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## รายละเอียดฟีเจอร์ที่ทำเสร็จ ✅ 
+1. เพิ่มงาน (Add Todo)
+- มีช่อง input ให้กรอกชื่อรายการ
+- ปุ่ม “Add” เพื่อเพิ่มเข้า list
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+2. แสดงรายการงาน (List Todos)
+- แสดงรายการทั้งหมด
+- แต่ละรายการมีชื่อ + ปุ่มลบ
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. ลบงาน (Delete Todo)
+- ลบรายการออกจาก list ได้
+  
+4. เปลี่ยนสถานะงาน (Toggle Complete)
+- คลิกที่รายการเพื่อสลับ “เสร็จแล้ว / ยังไม่เสร็จ”
 
-## Learn More
+5. บันทึกข้อมูลลง localStorage
+- ใช้ useEffect เพื่อให้ข้อมูลไม่หายเมื่อ refresh หน้า
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ฟีเจอร์เสริม (Bonus)
+- Filter: แสดงเฉพาะ “All / Done / Not Done”
+- UI สวยงามหรือ responsive
+- แสดงวันที่สร้างแต่ละงาน
+- มี dark mode
